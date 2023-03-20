@@ -24,35 +24,35 @@ public class Player {
 
             switch (tipo) {
                 case 1:
-                    System.out.println("Inserisci il titolo:");
+                    System.out.println("Title:");
                     String titolo = input.nextLine();
-                    System.out.println("Inserisci la luminosità:");
+                    System.out.println("Lum. :");
                     int luminosita = input.nextInt();
                     media[i] = new Img(titolo, luminosita);
                     break;
                 case 2:
-                    System.out.println("Inserisci il titolo:");
+                    System.out.println("Title:");
                     String titolo2 = input.nextLine();
-                    System.out.println("Inserisci la durata:");
+                    System.out.println("Durata:");
                     int durata2 = input.nextInt();
-                    System.out.println("Inserisci il volume:");
+                    System.out.println("Volume:");
                     int volume2 = input.nextInt();
-                    System.out.println("Inserisci la luminosità:");
+                    System.out.println("Lum. :");
                     int luminosita2 = input.nextInt();
                     media[i] = new Video(titolo2, durata2, volume2, luminosita2);
                     break;
                 case 3:
-                    System.out.println("Inserisci il titolo:");
+                    System.out.println("Title:");
                     String titolo3 = input.nextLine();
-                    System.out.println("Inserisci la durata:");
+                    System.out.println("Durata:");
                     int durata3 = input.nextInt();
-                    System.out.println("Inserisci il volume:");
+                    System.out.println("Volume:");
                     int volume3 = input.nextInt();
                     media[i] = new Audio(titolo3, durata3, volume3);
                     break;
                 default:
                     i--;
-                    System.out.println("Scelta inesistente riprova");
+                    System.out.println("No result, try again");
                     break;
 
             }
@@ -78,7 +78,7 @@ public class Player {
                     ((Playing) elem).play();
                 }
             } else {
-                System.out.println("Scelta inesistente, riprova");
+                System.out.println("No result, try again");
             }
         }
         input.close();
